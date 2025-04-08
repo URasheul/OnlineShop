@@ -1,0 +1,22 @@
+
+.mobileMenu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+	padding: 39px 16px;
+}
+
+.line {
+	height: 1px;
+	background-color: rgb(216, 216, 216);
+	width: 100%;
+}
+
+.text {
+	color: var(--text);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 26px;
+	text-decoration: none;
+}

@@ -1,0 +1,16 @@
+
+.headerIcon {	
+	position: relative;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+

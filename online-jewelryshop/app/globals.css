@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-main);
+}
+
+:root {  
+  --background: #ffffff; 
+  --text: #000000;
+  --gold: #A18A68;
+  --dark-grey: #707070;
+  --grey-light: #EFEFEF;
+  --gray: #D8D8D8;
+  --red: #D82700; 
+}
+
+
+  

@@ -1,0 +1,16 @@
+
+
+.count {	
+	position: absolute;
+	top: -5px;
+	right: -8px;	
+	background-color:  var(--background);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 1.5em;
+	width: 1.5em;
+	font-size: 12px;	
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 50%;
+}
