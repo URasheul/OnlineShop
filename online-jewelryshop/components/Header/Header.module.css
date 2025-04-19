@@ -1,10 +1,12 @@
 
 .header {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	row-gap: 9px;
-	padding: 20px 96px 17px;
+	padding-bottom: 17px;
+	border-bottom: 1px solid var(--grey);
 }
 
 .header a {
@@ -67,7 +69,9 @@ button.searchInput {
 }
 
 
-@media (max-width: 1000px) {
+
+
+@media (max-width: 1100px) {
 
 	.headerRight {
 		display: none;
@@ -109,16 +113,3 @@ button.searchInput {
 	}
 }
 
-@media (max-width: 600px) {
-
-	.header {
-		padding: 20px 46px 17px;
-	}
-}
-
-@media (max-width: 500px) {
-
-	.header {
-		padding: 20px 26px 17px;
-	}
-}

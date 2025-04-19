@@ -4,8 +4,9 @@ import CountIcon from "./CountIcon/CountIcon";
 import styles from "./HeaderIcon.module.css";
 import { HeaderIconProps, HeaderIcons } from "./HeaderIcon.props";
 import cn from "classnames";
+import { motion } from "motion/react";
 
-export default function HeaderIcon({ count, type, children, className }: HeaderIconProps) {
+export default function HeaderIcon({ count, type, children, className, onClick }: HeaderIconProps) {
 
 	const Icon = HeaderIcons[type]
 
@@ -18,9 +19,12 @@ export default function HeaderIcon({ count, type, children, className }: HeaderI
 	return (		
 		type === "MobileMenuIcon" || type === "CrossIcon" || type === "ExitIcon"
 		?
-		<button className={cn(styles.headerIcon, styles.link, className)}>			
-				<Icon/>
-				{children}			
+		<button 			
+		onClick={onClick} 
+		className={cn(styles.headerIcon, styles.link, className)
+		}>			
+			<Icon/>
+			{children}		
 		</button>
 		:
 		<button className={styles.headerIcon}>
@@ -29,7 +33,6 @@ export default function HeaderIcon({ count, type, children, className }: HeaderI
 				{children}
 			</Link>
 			{ count && type !== "UserIcon" && <CountIcon count={count}/>}
-		</button>
-		
+		</button>		
 	)
 }

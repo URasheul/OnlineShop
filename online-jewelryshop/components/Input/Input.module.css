@@ -1,0 +1,65 @@
+
+.inputWrapper {
+    position: relative;   
+}
+
+.input {
+    background-color: transparent;
+    color: var(--text);
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 10px;
+    width: 100%;
+    outline-style: none;    
+}
+
+.input:focus {
+    border-color: var(--gold);    
+}
+
+.inputBorder {
+    border-color: var(--text);
+}
+
+.s {
+    font-size: 12px;    
+    line-height: 20px; 
+    padding-bottom: 5px;
+}
+
+.m {   
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 4px;
+}
+
+.l {
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    position: absolute;  
+    right: 0;
+    bottom: 17px;
+}
+
+
+.ArrowIconSmall {      
+    bottom: 12px;
+}
+
+.CrossIcon {
+    bottom: 10px;
+}
+
+.input::placeholder {
+    color: var(--dark-grey);    
+}

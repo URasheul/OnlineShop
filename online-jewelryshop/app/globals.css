@@ -1,10 +1,15 @@
 * {
   box-sizing: border-box;
+  padding: 0;
 }
 
+html {
+  height: 100%;
+}
 
-body {
-  padding: 0;
+body { 
+  height: 100%;
+  padding: 40px 96px 90px;
   margin: 0;
   font-family: var(--font-main);
 }
@@ -15,9 +20,14 @@ body {
   --gold: #A18A68;
   --dark-grey: #707070;
   --grey-light: #EFEFEF;
-  --gray: #D8D8D8;
+  --grey: #D8D8D8;
   --red: #D82700; 
 }
 
 
+@media (max-width: 800px) {
+  body {
+    padding: 15px 16px;
+  }
+}
   

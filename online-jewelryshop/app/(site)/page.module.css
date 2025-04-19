@@ -1,1 +1,11 @@
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.toaster {
+    bottom: 0 !important;
+}

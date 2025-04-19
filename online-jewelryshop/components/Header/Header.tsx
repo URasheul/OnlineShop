@@ -1,16 +1,20 @@
+"use client"
 
 import HeaderIcon from "@/components/HeaderIcon/HeaderIcon";
 import styles from "./Header.module.css";
 import { HeaderProps } from "./Header.props";
 import Search from "../Search/Search";
 import Link from "next/link";
+import { useState } from "react";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 
-export default function Header({} : HeaderProps) {
-
+export default function Header({ isLogined } : HeaderProps) {
 	
+	const [mobileMenuIsOpened, setMobileMenuIsOpened] = useState<boolean>(false);	
 
 	return (
+		
 		<nav className={styles.header}>
 			<Link className={styles.logo} href={"/"}>
 				<span><span className={styles.firstLetter}>S</span>HOPPE</span>
@@ -26,18 +30,28 @@ export default function Header({} : HeaderProps) {
 						<HeaderIcon type={"CartIcon"}/>
 						<HeaderIcon type={"FavoritesIcon"}/>
 						<HeaderIcon type={"UserIcon"}/>
+						{isLogined ? <HeaderIcon type={"ExitIcon"}/> : null}
 					</div>
 				</div>			
 				<div className={styles.headerRightTablet}>						
 						<Search/>
 						<HeaderIcon type={"CartIcon"}/>
-						<HeaderIcon type={"MobileMenuIcon"}/>					
+						<HeaderIcon 
+						onClick={() => setMobileMenuIsOpened(!mobileMenuIsOpened)} 
+						type={mobileMenuIsOpened ? "CrossIcon" : "MobileMenuIcon"}
+						/>					
 				</div>			
 				<div className={styles.headerRightMobile}>						  
 						<HeaderIcon type={"CartIcon"}/>
-						<HeaderIcon type={"MobileMenuIcon"}/>					
+						<HeaderIcon 
+						onClick={() => setMobileMenuIsOpened(!mobileMenuIsOpened)} 
+						type={mobileMenuIsOpened ? "CrossIcon" : "MobileMenuIcon"}
+						/>					
 				</div>
-				<Search opened className={styles.searchInput}/>							
+				<Search opened className={styles.searchInput}/>
+				{mobileMenuIsOpened ? <MobileMenu/> : <></>}
 		</nav>
+		
+		
 	)
 }

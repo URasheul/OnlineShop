@@ -19,4 +19,5 @@ export const HeaderIcons = {
 export interface HeaderIconProps extends DetailsHTMLAttributes<HTMLElement> {
 	count?: number;
 	type: keyof typeof HeaderIcons;
+	onClick?: () => void;
 }
